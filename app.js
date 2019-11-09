@@ -17,13 +17,13 @@ app.get('/', (req, res) => {
 app.get('/translate', (req, res) => {
     const word = req.query.word | "hello";
     const lang = req.query.lang | "vi";
-    var ret;
-    const words = db.get("words");
-    if (lang = "vi") {
-        ret = words.find(w => w.vi == word);
-    } else {
-        ret = words.find(w => w.en == word);
-    }
+    var ret = "";
+    // const words = db.get("words");
+    // if (lang = "vi") {
+    //     ret = words.find(w => w.vi == word);
+    // } else {
+    //     ret = words.find(w => w.en == word);
+    // }
 
     res.json(ret)
 })
